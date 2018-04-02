@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngFor="let card of fungame" class="card flipped"  [ngClass]="{'flipped': card.flip}">
+      <div [style.backgroundImage]="'url('+card.src+')'" class="front">
+      </div>
+
+      <div class="back" (click)="flipCard(card)">
+      </div>
+  </div>
+  
+  <div *ngIf="win" class="win">
+      <img src="assets/imgs/Congrats-You-Win.gif">
+  </div>
+</div>
